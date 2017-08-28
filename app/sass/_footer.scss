@@ -1,0 +1,9 @@
+.footer {
+  &__container {
+    width: 100%;
+    font-size: $body-font-size;
+    line-height: $header-font-size;
+    text-align: center;
+    border-top: $border-default;
+  }
+}

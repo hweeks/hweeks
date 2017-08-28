@@ -1,0 +1,43 @@
+.bikes {
+  &__container {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.bike {
+  &__container {
+    display: flex;
+    flex-flow: column;
+    border-bottom: $border-default;
+    padding: $atom*2 $atom;
+    &:last-child {
+      border: 0;
+    }
+  }
+  &__image {
+    height: auto;
+    max-width: 100%;
+    padding: $atom*3 0;
+  }
+  &__name {
+    font-size: $header-font-size;
+  }
+  &__info {
+    font-size: $body-font-size;
+  }
+}
+
+@media (min-width: 415px) {
+  .bike {
+    &__name {
+      order: 1;
+    }
+    &__info {
+      order: 2;
+    }
+    &__image {
+      order: 3;
+    }
+  }
+}

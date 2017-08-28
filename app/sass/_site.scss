@@ -1,0 +1,13 @@
+.site {
+  &__container {
+    max-width: 1200px;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    margin: auto;
+  }
+  &__content {
+    flex-grow: 2;
+  }
+}
