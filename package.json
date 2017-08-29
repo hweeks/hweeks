@@ -4,7 +4,7 @@
   "description": "My Homepage",
   "main": "index.js",
   "scripts": {
-    "develop": "brunch w -s",
+    "start": "brunch w -s",
     "build": "brunch b -p",
     "test": "npm test"
   },
