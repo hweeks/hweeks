@@ -6,7 +6,10 @@
   "scripts": {
     "start": "brunch w -s",
     "build": "brunch b -p",
-    "test": "jest"
+    "test": "jest",
+    "ci": "npm run ci-test; npm run ci-lint",
+    "ci-test": "$(npm bin)/jest",
+    "ci-lint": "$(npm bin)/eslint app/"
   },
   "repository": {
     "type": "git",
