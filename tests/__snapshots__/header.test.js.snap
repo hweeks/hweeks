@@ -11,12 +11,13 @@ exports[`Header actually renders 1`] = `
   >
     hweeks.com
   </a>
-  <section
+  <button
     className="header__toggle"
     onClick={[Function]}
+    role="menuitem"
   >
     menu
-  </section>
+  </button>
   <section
     className="header__links"
   >
@@ -31,6 +32,7 @@ exports[`Header actually renders 1`] = `
       className="header__link"
       href="/pdf/r.pdf"
       onClick={[Function]}
+      role="menuitem"
     >
       resume
     </a>
@@ -44,6 +46,7 @@ exports[`Header actually renders 1`] = `
       className="header__link"
       href="mailto:root@hweeks.com"
       onClick={[Function]}
+      role="menuitem"
     >
       email
     </a>

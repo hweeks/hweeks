@@ -6,7 +6,10 @@
   "scripts": {
     "start": "brunch w -s",
     "build": "brunch b -p",
-    "test": "jest"
+    "test": "jest",
+    "ci": "npm run ci-test; npm run ci-lint",
+    "ci-test": "$(npm bin)/jest",
+    "ci-lint": "$(npm bin)/eslint app/"
   },
   "repository": {
     "type": "git",
@@ -36,6 +39,7 @@
     "babel-preset-react": "^6.24.1",
     "clean-css-brunch": "^2.10.0",
     "enzyme": "^2.9.1",
+    "eslint": "^4.5.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",

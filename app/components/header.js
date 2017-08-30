@@ -32,9 +32,9 @@ export default class Header extends React.Component {
         <Link to="/" className="header__logo" onClick={this.closeMenu}>
           hweeks.com
         </Link>
-        <section className="header__toggle" role="menuitem" onClick={this.toggleMenu}>
+        <button className="header__toggle" role="menuitem" onClick={this.toggleMenu}>
           menu
-        </section>
+        </button>
         <section className={menuToggle}>
           <Link className="header__link" to="/bikes" onClick={this.toggleMenu}>
             bikes

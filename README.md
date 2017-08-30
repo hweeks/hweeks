@@ -1,5 +1,5 @@
 # hweeks.com
-
+[![CircleCI](https://circleci.com/gh/hweeks/hweeks/tree/master.svg?style=svg)](https://circleci.com/gh/hweeks/hweeks/tree/master)
 ---
 
 ## overview
