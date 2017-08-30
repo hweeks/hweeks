@@ -1,6 +1,5 @@
 # hweeks.com
 [![CircleCI](https://circleci.com/gh/hweeks/hweeks/tree/master.svg?style=svg)](https://circleci.com/gh/hweeks/hweeks/tree/master)
----
 
 ## overview
 
@@ -37,3 +36,33 @@ To build a prod bundle:
     npm run build
 
 This will create a `public` folder. Feel free to deploy this to where ever you'd like.
+
+## testing
+
+### jest
+
+To run our jest commands:
+
+    jest
+
+If you're not on windows:
+
+    npm run ci-test
+
+### eslint
+
+To run our jest commands:
+
+    eslint .\app\
+
+If you're not on windows:
+
+    npm run ci-lint
+
+### circleci
+
+I've added pull request only integration for non forked repos here. It runs:
+
+    npm run ci
+
+This runs both jest and lint on non-windows environments.
