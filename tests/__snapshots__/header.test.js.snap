@@ -11,13 +11,13 @@ exports[`Header actually renders 1`] = `
   >
     hweeks.com
   </a>
-  <section
+  <button
     className="header__toggle"
     onClick={[Function]}
     role="menuitem"
   >
     menu
-  </section>
+  </button>
   <section
     className="header__links"
   >

@@ -27,6 +27,11 @@
   }
   &__toggle {
     font-size: $header-font-size;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    outline: 0;
   }
   &__logo {
     font-size: $header-font-size;
