@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bike actually renders 1`] = `
+<section
+  className="bike__container"
+>
+  <img
+    alt="A picture of a bike name bicycle."
+    className="bike__image"
+    src="/img/bmc_small.jpg"
+    srcSet="/img/bmc_large.jpg 1024w, /img/bmc_medium.jpg 640w, /img/bmc_small.jpg 320w"
+  />
+  <section
+    className="bike__name"
+  >
+    bike name
+  </section>
+  <section
+    className="bike__info"
+  >
+    size: 
+    20
+    cm
+  </section>
+</section>
+`;

@@ -17,6 +17,10 @@ To install:
 Assumptions:
 
   1. [brunch](http://brunch.io/docs/getting-started) installed globally
+  1. jest installed globally
+  1. eslint installed globally
+
+I'm aware I could use the `$(npm bin)` shortcut, but I'm on windows and it's frankly a hassle to do both.
 
 ## development
 

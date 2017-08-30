@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header actually renders 1`] = `
+<nav
+  className="header__container"
+>
+  <a
+    className="header__logo"
+    href="/"
+    onClick={[Function]}
+  >
+    hweeks.com
+  </a>
+  <section
+    className="header__toggle"
+    onClick={[Function]}
+  >
+    menu
+  </section>
+  <section
+    className="header__links"
+  >
+    <a
+      className="header__link"
+      href="/bikes"
+      onClick={[Function]}
+    >
+      bikes
+    </a>
+    <a
+      className="header__link"
+      href="/pdf/r.pdf"
+      onClick={[Function]}
+    >
+      resume
+    </a>
+    <a
+      className="header__link"
+      href="https://github.com/hweeks"
+    >
+      git
+    </a>
+    <a
+      className="header__link"
+      href="mailto:root@hweeks.com"
+      onClick={[Function]}
+    >
+      email
+    </a>
+  </section>
+</nav>
+`;

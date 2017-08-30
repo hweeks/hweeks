@@ -1,14 +1,14 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import App from './views/app.js';
+import App from './composite/app';
 
 const load = () => {
   ReactDOM.render(
     <BrowserRouter>
-      <App/>
+      <App />
     </BrowserRouter>,
-    document.querySelector('#app')
+    document.querySelector('#app'),
   );
 };
 
