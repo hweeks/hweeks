@@ -6,6 +6,7 @@
   * [installation](#installation)
   * [development](#development)
   * [build](#build)
+  * [testing](#testing)
 
 ## installation
 
