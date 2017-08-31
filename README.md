@@ -19,6 +19,7 @@ Assumptions:
   1. [brunch](http://brunch.io/docs/getting-started) installed globally
   1. jest installed globally
   1. eslint installed globally
+  1. stylelint installed globally
 
 I'm aware I could use the `$(npm bin)` shortcut, but I'm on windows and it's frankly a hassle to do both.
 
@@ -49,6 +50,16 @@ To run our jest commands:
 If you're not on windows:
 
     npm run ci-test
+
+### stylelint
+
+To run our stylelint commands:
+
+    npm run stylelint
+
+If you're not on windows:
+
+    npm run ci-stylelint
 
 ### eslint
 
