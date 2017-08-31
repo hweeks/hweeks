@@ -7,6 +7,7 @@
     padding: $atom*2 $atom;
     border-bottom: $border-default;
   }
+
   &__links {
     display: none;
     position: absolute;
@@ -19,12 +20,12 @@
     left: 0;
     transform: translateY(100%);
     background: $bg-color;
+
     &.active {
-
       display: flex;
-
     }
   }
+
   &__toggle {
     font-size: $header-font-size;
     border: 0;
@@ -33,11 +34,13 @@
     background-color: inherit;
     outline: 0;
   }
+
   &__logo {
     font-size: $header-font-size;
     text-decoration: none;
     color: inherit;
   }
+
   &__link {
     line-height: $header-font-size;
     font-size: $header-font-size;
@@ -47,11 +50,12 @@
   }
 }
 
-@media (min-width: 415px) {
+@media (min-width: $breakpoint) {
   .header {
     &__toggle {
       display: none;
     }
+
     &__links {
       display: flex;
       flex-flow: row;
@@ -60,6 +64,7 @@
       transform: none;
       width: auto;
     }
+
     &__link {
       padding: 0 $atom*2;
     }

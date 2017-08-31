@@ -6,11 +6,13 @@
     text-align: center;
     border-top: $border-default;
   }
+
   &__link {
     font-size: $body-font-size;
     line-height: $header-font-size;
     text-decoration: none;
     color: inherit;
+
     &:hover {
       text-decoration: underline;
     }
