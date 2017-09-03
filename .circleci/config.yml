@@ -5,16 +5,17 @@ jobs:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-      - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # - checkout
+      # - restore_cache:
+      #     keys:
+      #     - v1-dependencies-{{ checksum "package.json" }}
+      #     - v1-dependencies-
+      # - run: npm install
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #     key: v1-dependencies-{{ checksum "package.json" }}
       # - run: npm run ci
+      - run: cat ~/.ssh/id_rsa.pub
       - run: ssh-keyscan -H 34.210.133.207 >> ~/.ssh/known_hosts
       - run: ssh -o ec2-user@34.210.133.207
