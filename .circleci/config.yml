@@ -16,3 +16,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run ci
+      - run: ssh ec2-user@34.210.133.207
+      - run: ls
