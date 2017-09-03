@@ -16,7 +16,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       # - run: npm run ci
-      - run: ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa -q -N ""
+      - run: mkdir aws
+      - run: ssh-keygen -b 2048 -t rsa -f aws/id_rsa -q -N ""
       - run: ls ~/.ssh/
       - run: ssh-keyscan -H 34.210.133.207 >> ~/.ssh/known_hosts
       - run: ssh -o ec2-user@34.210.133.207
