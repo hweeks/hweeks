@@ -21,3 +21,5 @@ jobs:
       # - run: mkdir ssh-local
       # - run: ssh-keygen -b 2048 -t rsa -f ssh-local/id_rsa -q -N ""
       # - run: ssh ec2-user@34.210.133.207
+      - run: touch ~/.ssh/id_rsa.pub
+      - run: echo $SSH_KEY > ~/.ssh/id_rsa.pub
