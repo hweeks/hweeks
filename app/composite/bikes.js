@@ -8,9 +8,9 @@ const bikes = [
     size: 58,
   },
   {
-    name: 'Specialized Allez',
-    imagename: 'allez',
-    size: 61,
+    name: 'Specialized RockHopper',
+    imagename: 'hopper',
+    size: 58,
   },
   {
     name: 'Surly Disc Trucker',
