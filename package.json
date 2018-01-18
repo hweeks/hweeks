@@ -12,7 +12,8 @@
     "ci": "npm run ci-test; npm run ci-lint; npm run ci-stylelint",
     "ci-test": "$(npm bin)/jest",
     "ci-lint": "$(npm bin)/eslint app/",
-    "ci-stylelint": "$(npm bin)/stylelint app/sass/*.scss"
+    "ci-stylelint": "$(npm bin)/stylelint app/sass/*.scss",
+    "serve": "$(npm bin)/forever node ./server/"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
   "homepage": "https://github.com/hweeks/hweeks#readme",
   "dependencies": {
     "brunch": "^2.10.10",
+    "express": "^4.16.2",
+    "forever": "^0.15.3",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

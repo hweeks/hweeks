@@ -17,3 +17,7 @@ exports.plugins = {
     pattern: '^app[\\\/\\\\].*\\\.scss?$'
   }
 };
+
+exports.paths = {
+  public: './build'
+}
