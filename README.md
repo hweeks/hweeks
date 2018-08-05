@@ -78,3 +78,7 @@ I've added pull request only integration for non forked repos here. It runs:
     npm run ci
 
 This runs both jest and lint on non-windows environments.
+
+## deployment
+
+If a pr is merged, I've added a simple deployment script. The build is triggered by a deployments script I've deployed to my droplet. All passing builds should take about 5 minutes to deploy and be available live at [hweeks.com](https://hweeks.com).
