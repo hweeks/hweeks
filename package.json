@@ -1,6 +1,6 @@
 {
   "name": "hweeks",
-  "version": "0.0.1",
+  "version": "1..0.0",
   "description": "My Homepage",
   "main": "index.js",
   "scripts": {
