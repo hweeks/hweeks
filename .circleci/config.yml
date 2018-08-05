@@ -2,18 +2,39 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
-    working_directory: ~/repo
+      - image: circleci/node:8
+    working_directory: ~/hweeks
     steps:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "yarn.lock" }}
           - v1-dependencies-
-      - run: npm install
+      - run: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run ci
-
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn ci
+  deploy:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/hweeks
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-
+      - run: |
+          ssh-keyscan -H 206.189.222.25 >> ~/.ssh/known_hosts
+          ssh root@206.189.222.25 'source ~/deploy.sh hweeks git@github.com:hweeks/hweeks.git'
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          filters:
+              branches:
+                  only: master
