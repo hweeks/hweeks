@@ -23,10 +23,6 @@ codeRender.propTypes = {
 };
 
 export default class Post extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-  }
   componentWillMount() {
     if (!this.state) {
       this.fetchPost();
