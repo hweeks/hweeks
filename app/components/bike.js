@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Bike extends React.Component {
+class Bike extends React.PureComponent {
   buildImageInfo() {
     const imageObject = {};
     imageObject.alt = `A picture of a ${this.props.name} bicycle.`;

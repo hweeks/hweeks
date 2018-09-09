@@ -39,6 +39,9 @@ export default class Header extends React.Component {
           <Link className="header__link" to="/bikes" onClick={this.toggleMenu}>
             bikes
           </Link>
+          <Link className="header__link" to="/blog" onClick={this.toggleMenu}>
+            blog
+          </Link>
           <a className="header__link" href="/pdf/r.pdf" role="menuitem" onClick={this.toggleMenu}>
             resume
           </a>

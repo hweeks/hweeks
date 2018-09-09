@@ -30,6 +30,13 @@ exports[`Header actually renders 1`] = `
     </a>
     <a
       className="header__link"
+      href="/blog"
+      onClick={[Function]}
+    >
+      blog
+    </a>
+    <a
+      className="header__link"
       href="/pdf/r.pdf"
       onClick={[Function]}
       role="menuitem"
