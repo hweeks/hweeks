@@ -22,7 +22,7 @@ export default class Blog extends React.PureComponent {
       return (<div>No posts could be fetched at this time.</div>);
     }
     return (
-      <div>
+      <div className="blog__container">
         {
           posts.map(post => (<Summary key={`summary-${post.slug}`} {...post} />))
         }

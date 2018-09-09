@@ -10,7 +10,7 @@ I'm very into bicycles.
 
 This is the _first_ paragraph. It's short.
 
-```js
+```javascript
 var test = 'old code style';
 ```
 

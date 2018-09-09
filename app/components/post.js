@@ -1,8 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
+import hljs from 'highlight.js/lib/highlight';
+import javascript from 'highlight.js/lib/languages/javascript';
+import bash from 'highlight.js/lib/languages/bash';
+
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('bash', bash);
+
+const codeRender = ({ language, value }) => {
+  const builtCode = hljs.highlight(language, value);
+  return (
+    <pre>
+      <code dangerouslySetInnerHTML={{ __html: builtCode.value }} />
+    </pre>
+  );
+};
+
+codeRender.propTypes = {
+  language: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+};
 
 export default class Post extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
   componentWillMount() {
     if (!this.state) {
       this.fetchPost();
@@ -23,7 +47,7 @@ export default class Post extends React.PureComponent {
     } else if (error) {
       return (<div>This post could not be fetched.</div>);
     }
-    return (<ReactMarkdown source={markdown} />);
+    return (<ReactMarkdown className="blog__post" source={markdown} renderers={{ code: codeRender }} />);
   }
 }
 

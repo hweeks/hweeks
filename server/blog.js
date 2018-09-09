@@ -7,9 +7,10 @@ const getQuickLook = () => {
       Promise.all(allPosts.map(getPost)).then((postContents) => {
         const builtPosts = postContents.map((post, index) => {
           const content = post.split('#').filter(section => section.startsWith(' Introduction'))[0]
+          const title = post.split('#')[1].trim()
           const image = content.split('\n').filter(row => row.startsWith('!['))[0].split('(')[1].replace(')', '').replace('../app/assets', '/img')
           const firstParagraph = content.split('\n')[4]
-          return {image, firstParagraph, slug: allPosts[index]}
+          return {image, firstParagraph, slug: allPosts[index], title}
         })
         resolve(builtPosts)
       }).catch((err) => {
