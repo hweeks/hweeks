@@ -9,7 +9,7 @@ exports[`Footer actually renders 1`] = `
     className="footer__link"
     href="https://github.com/hweeks/hweeks"
   >
-    git
+    luv
   </a>
    in the bay
 </section>

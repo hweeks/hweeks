@@ -29,9 +29,11 @@
     "brunch": "^2.10.10",
     "express": "^4.16.2",
     "forever": "^0.15.3",
+    "helmet": "^3.13.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-markdown": "^3.6.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "sass-brunch": "^2.10.4"

@@ -8,9 +8,7 @@ export default () => (
       in the bay area. I&#39;m currently working at DoorDash as a Software Engineer.
     </section>
     <section className="home__info">
-        If you&#39;d like to talk, <a href="mailto:root@hweeks.com" className="home__link">
-          root@hweeks.com
-      </a> is best.
+        If you&#39;d like to talk, <a href="mailto:root@hweeks.com" className="home__link">root@hweeks.com</a> is best.
     </section>
     <section className="home__info">
       If you&#39;d like to ride, <a
