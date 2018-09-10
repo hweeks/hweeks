@@ -6,6 +6,7 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import bash from 'highlight.js/lib/languages/bash';
 
 hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('js', javascript);
 hljs.registerLanguage('bash', bash);
 
 const codeRender = ({ language, value }) => {
@@ -31,7 +32,7 @@ export default class Post extends React.PureComponent {
   fetchPost() {
     const { post } = this.props.match.params;
     fetch(`/post/${post}`).then(res => res.text()).then((markdown) => {
-      this.setState({ markdown: markdown.replace('../app/assets', '/img') });
+      this.setState({ markdown: markdown.replace('../app/assets', '') });
     }).catch((err) => {
       this.setState({ error: err });
     });
