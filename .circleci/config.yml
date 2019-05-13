@@ -25,7 +25,6 @@ jobs:
       - checkout
       - run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASS
-          LATEST_VERSION=$(git describe --abbrev=0 --tags)
           docker build -t hweeks-circle --build-arg GIT_COMMIT=$(git log -1 --format=%h) .
           docker tag hweeks-circle hams/hweeks:$(git log -1 --format=%h)
           docker push hams/hweeks:$(git log -1 --format=%h)
