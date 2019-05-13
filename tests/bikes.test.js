@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Bike from '../app/components/bike';
+import Bike from '../src/components/Bike';
 
 const bikeSettings = {
   name: 'bike name',

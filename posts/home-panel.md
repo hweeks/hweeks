@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![screenshot](../app/assets/img/home-panel.png)
+![screenshot](../assets/img/home-panel.png)
 
 As much as I love my hue lights, I've discovered they are frequently almost completely alien to my family when they visit. To have someone switch context from hitting a switch to opening their phone, selecting an app, and turning it off is hard. I figured building a nice app to run on an Amazon Fire tablet would be the way to go.
 

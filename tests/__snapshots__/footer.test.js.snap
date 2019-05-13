@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer actually renders 1`] = `
-<section
-  className="footer__container"
+<footer
+  className="sc-bdVaJa hpkBOo"
 >
   made with 
   <a
-    className="footer__link"
+    className="sc-bwzfXH hMjEnB"
     href="https://github.com/hweeks/hweeks"
   >
-    luv
+    git
   </a>
-   in the bay
-</section>
+   in the forest
+</footer>
 `;
