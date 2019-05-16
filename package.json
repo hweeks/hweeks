@@ -4,7 +4,7 @@
   "description": "My Homepage",
   "main": "index.js",
   "scripts": {
-    "start": "IS_DEV=true webpack-dev-server",
+    "start": "IS_DEV=true webpack-dev-server --hot",
     "build": "webpack",
     "test": "jest",
     "lint": "eslint src/",
