@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Footer from '../app/components/footer';
+import Footer from '../src/components/Footer';
 
 test('Footer actually renders', () => {
   const component = renderer.create(

@@ -2,61 +2,61 @@
 
 exports[`Header actually renders 1`] = `
 <nav
-  className="header__container"
+  className="sc-bdVaJa hsITFy"
 >
   <a
-    className="header__logo"
+    className="sc-htpNat fXdlIU"
     href="/"
     onClick={[Function]}
   >
     hweeks.com
   </a>
   <button
-    className="header__toggle"
+    className="sc-ifAKCX dBisCF"
     onClick={[Function]}
     role="menuitem"
   >
     menu
   </button>
-  <section
-    className="header__links"
+  <div
+    className="sc-EHOje lnZyKN"
   >
     <a
-      className="header__link"
+      className="sc-bwzfXH dTFgNw"
       href="/bikes"
       onClick={[Function]}
     >
       bikes
     </a>
     <a
-      className="header__link"
+      className="sc-bwzfXH dTFgNw"
       href="/blog"
       onClick={[Function]}
     >
       blog
     </a>
     <a
-      className="header__link"
-      href="/pdf/r.pdf"
+      className="sc-bxivhb kkcTrD"
+      href="/assets/pdf/r.pdf"
       onClick={[Function]}
       role="menuitem"
     >
       resume
     </a>
     <a
-      className="header__link"
+      className="sc-bxivhb kkcTrD"
       href="https://github.com/hweeks"
     >
       git
     </a>
     <a
-      className="header__link"
+      className="sc-bxivhb kkcTrD"
       href="mailto:root@hweeks.com"
       onClick={[Function]}
       role="menuitem"
     >
       email
     </a>
-  </section>
+  </div>
 </nav>
 `;

@@ -5,4 +5,5 @@ node_modules
 public
 
 # built stuff
-build
+static/*.js
+static/index.html

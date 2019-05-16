@@ -15,7 +15,19 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn ci
+      - run: yarn test
+  deploy-sha:
+    docker:
+      - image: circleci/node:8.15
+    working_directory: ~/repo
+    steps:
+      - setup_remote_docker
+      - checkout
+      - run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker build -t hweeks-circle --build-arg GIT_COMMIT=$(git log -1 --format=%h) .
+          docker tag hweeks-circle hams/hweeks:$(git log -1 --format=%h)
+          docker push hams/hweeks:$(git log -1 --format=%h)
   deploy:
     docker:
       - image: circleci/node:8
@@ -28,12 +40,13 @@ jobs:
           - v1-dependencies-
       - run: |
           ssh-keyscan -H 206.189.222.25 >> ~/.ssh/known_hosts
-          ssh root@206.189.222.25 'source ~/deploy.sh hweeks git@github.com:hweeks/hweeks.git'
+          ssh root@206.189.222.25 'source ~/deploy.sh -n hweeks -i hams/hweeks:$(git log -1 --format=%h) -p 3000:3000 -s hweeks.com -r http://hweeks:3000
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - build
+      - deploy-sha
       - deploy:
           filters:
               branches:
