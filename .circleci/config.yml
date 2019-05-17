@@ -48,6 +48,8 @@ workflows:
       - build
       - deploy-sha
       - deploy:
+          requires:
+            - deploy-sha
           filters:
               branches:
                   only: master
