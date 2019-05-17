@@ -27,6 +27,7 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker build -t hweeks-circle --build-arg GIT_COMMIT=$(git log -1 --format=%h) .
           docker tag hweeks-circle hams/hweeks:$(git log -1 --format=%h)
+          docker tag hweeks-circle hams/hweeks:latest
           docker push hams/hweeks:$(git log -1 --format=%h)
           docker push hams/hweeks:latest
   deploy:
