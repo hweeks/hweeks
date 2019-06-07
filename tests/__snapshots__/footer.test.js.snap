@@ -2,7 +2,7 @@
 
 exports[`Footer actually renders 1`] = `
 <footer
-  className="sc-bdVaJa hpkBOo"
+  className="sc-bdVaJa hexMQ"
 >
   made with 
   <a

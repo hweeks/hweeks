@@ -4,8 +4,8 @@ import {
   BikeContainer,
   BikeImage,
   BikeName,
-  BikeInfo
-} from './styles'
+  BikeInfo,
+} from './styles';
 
 class Bike extends React.PureComponent {
   buildImageInfo() {

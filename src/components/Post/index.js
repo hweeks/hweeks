@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 import bash from 'highlight.js/lib/languages/bash';
-import {PostWrapper} from './styles'
+import { PostWrapper } from './styles';
 
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('js', javascript);

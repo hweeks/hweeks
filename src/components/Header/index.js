@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   HeaderContainer,
   HeaderLinkWrapped,
@@ -7,7 +6,7 @@ import {
   HeaderLink,
   HeaderButton,
   HeaderMenuWrapper,
-} from './styles'
+} from './styles';
 
 export default class Header extends React.PureComponent {
   constructor(props) {
@@ -34,7 +33,7 @@ export default class Header extends React.PureComponent {
     });
   }
   render() {
-    const {isVisible} = this.state
+    const { isVisible } = this.state;
     return (
       <HeaderContainer>
         <HeaderLogoWrapped to="/" onClick={this.closeMenu}>

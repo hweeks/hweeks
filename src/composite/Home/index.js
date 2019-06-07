@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   HomeContainer,
   HomeInfo,
   HomeLink,
-  HomeWrappedLink
-} from './styles'
+  HomeWrappedLink,
+} from './styles';
 
 export default () => (
   <HomeContainer>

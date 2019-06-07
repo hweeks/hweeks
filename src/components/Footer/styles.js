@@ -1,21 +1,20 @@
-import styled from 'styled-components'
-import baseStyles from '../../styleRoot'
-const {borderDefault, bodyFontSize, headerFontSize} = baseStyles
+import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  font-size: ${bodyFontSize}rem;
-  line-height: ${headerFontSize}rem;
+  font-size: ${props => props.theme.bodyFontSize}rem;
+  line-height: ${props => props.theme.headerFontSize}rem;
   text-align: center;
-  border-top: ${borderDefault};
-`
+  border-top: ${props => props.theme.borderDefault};
+  border-color: ${props => props.theme.syntax.constant};
+`;
 export const FooterLink = styled.a`
-  font-size: ${bodyFontSize}rem;
-  line-height: ${headerFontSize}rem;
+  font-size: ${props => props.theme.bodyFontSize}rem;
+  line-height: ${props => props.theme.headerFontSize}rem;
   text-decoration: none;
   color: inherit;
 
   &:hover {
     text-decoration: underline;
   }
-`
+`;

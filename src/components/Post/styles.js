@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import ReactMarkdown from 'react-markdown'
+import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
 export const PostWrapper = styled(ReactMarkdown)`
   display: flex;
@@ -420,4 +420,4 @@ export const PostWrapper = styled(ReactMarkdown)`
   hr {
     border-bottom-color: #eee;
   }
-`
+`;
