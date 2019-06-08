@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  BlogContainer
-} from './styles'
+  BlogContainer,
+} from './styles';
 import Summary from '../../components/Summary';
 
 export default class Blog extends React.PureComponent {

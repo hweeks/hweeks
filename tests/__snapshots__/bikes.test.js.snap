@@ -2,7 +2,7 @@
 
 exports[`Bike actually renders 1`] = `
 <div
-  className="sc-bdVaJa eNfedT"
+  className="sc-bdVaJa uVrdD"
 >
   <img
     alt="A picture of a bike name bicycle."
@@ -11,12 +11,12 @@ exports[`Bike actually renders 1`] = `
     srcSet="assets/img/bmc_large.jpg 1024w, assets/img/bmc_medium.jpg 640w, assets/img/bmc_small.jpg 320w"
   />
   <p
-    className="sc-htpNat eOtomC"
+    className="sc-htpNat kPwbpi"
   >
     bike name
   </p>
   <p
-    className="sc-bxivhb XKVVD"
+    className="sc-bxivhb dTggbt"
   >
     size: 
     20

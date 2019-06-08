@@ -1,7 +1,5 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import baseStyles from '../../styleRoot'
-const {atom, borderDefault, bgColor, headerFontSize, breakpoint} = baseStyles
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.nav`
   display: flex;
@@ -9,63 +7,68 @@ export const HeaderContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: ${atom * 2}rem ${atom}rem;
-  border-bottom: ${borderDefault};
-`
+  padding: ${
+  props => props.theme.atom * 2
+}rem ${
+  props => props.theme.atom
+}rem;
+  border-bottom: ${props => props.theme.borderDefault};
+  border-color: ${props => props.theme.syntax.constant};
+`;
 
 export const HeaderLinkWrapped = styled(Link)`
-  line-height: ${headerFontSize}rem;
-  font-size: ${headerFontSize}rem;
-  padding: ${atom * 2}rem;
+  line-height: ${props => props.theme.headerFontSize}rem;
+  font-size: ${props => props.theme.headerFontSize}rem;
+  padding: ${props => props.theme.atom * 2}rem;
   text-decoration: none;
-  color: inherit;
-`
+  color: ${props => props.theme.syntax.keyword};
+`;
 
 export const HeaderLogoWrapped = styled(Link)`
-  font-size: ${headerFontSize}rem;
+  font-size: ${props => props.theme.headerFontSize}rem;
   text-decoration: none;
-  color: inherit;
-  @media (min-width: ${breakpoint}rem) {
-    padding: 0 ${atom * 2}rem;
+  color: ${props => props.theme.syntax.string};
+  @media (min-width: ${props => props.theme.breakpoint}rem) {
+    padding: 0 ${props => props.theme.atom * 2}rem;
   }
-`
+`;
 
 export const HeaderLink = styled.a`
-  line-height: ${headerFontSize}rem;
-  font-size: ${headerFontSize}rem;
-  padding: ${atom * 2}rem;
+  line-height: ${props => props.theme.headerFontSize}rem;
+  font-size: ${props => props.theme.headerFontSize}rem;
+  padding: ${props => props.theme.atom * 2}rem;
   text-decoration: none;
-  color: inherit;
-  @media (min-width: ${breakpoint}rem) {
-    padding: 0 ${atom * 2}rem;
+  color: ${props => props.theme.syntax.keyword};
+  @media (min-width: ${props => props.theme.breakpoint}rem) {
+    padding: 0 ${props => props.theme.atom * 2}rem;
   }
-`
+`;
 
 export const HeaderButton = styled.button`
-  font-size: ${headerFontSize}rem;
+  font-size: ${props => props.theme.headerFontSize}rem;
   border: 0;
   margin: 0;
   padding: 0;
   background-color: inherit;
   outline: 0;
-  @media (min-width: ${breakpoint}rem) {
+  @media (min-width: ${props => props.theme.breakpoint}rem) {
     display: none;
   }
-`
+`;
 
 export const HeaderMenuWrapper = styled.div`
-  display: ${props => props.isVisible ? 'flex' : 'none'};
+  display: ${props => (props.isVisible ? 'flex' : 'none')};
   position: absolute;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  border-bottom: ${borderDefault};
+  border-bottom: ${props => props.theme.borderDefault};
+  border-color: ${props => props.theme.syntax.constant};
   width: 100%;
-  bottom: -${atom / 2}rem;
+  bottom: -${props => props.theme.atom / 2}rem;
   left: 0;
   transform: translateY(100%);
-  background: ${bgColor};
-  @media (min-width: ${breakpoint}rem) {
+  @media (min-width: ${props => props.theme.breakpoint}rem) {
     display: flex;
     flex-flow: row;
     position: static;
@@ -73,4 +76,4 @@ export const HeaderMenuWrapper = styled.div`
     transform: none;
     width: auto;
   }
-`
+`;

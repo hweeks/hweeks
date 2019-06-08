@@ -8,7 +8,7 @@ import {
   SummaryAboutTitle,
   SummaryAboutText,
   SummaryLink,
-} from './styles'
+} from './styles';
 
 const Summary = ({ firstParagraph, image, slug, title }) => (
   <SummaryContianer>

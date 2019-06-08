@@ -2,10 +2,10 @@
 
 exports[`Header actually renders 1`] = `
 <nav
-  className="sc-bdVaJa hsITFy"
+  className="sc-bdVaJa cupZnc"
 >
   <a
-    className="sc-htpNat fXdlIU"
+    className="sc-htpNat eVwUtI"
     href="/"
     onClick={[Function]}
   >
@@ -19,24 +19,24 @@ exports[`Header actually renders 1`] = `
     menu
   </button>
   <div
-    className="sc-EHOje lnZyKN"
+    className="sc-EHOje rSFJP"
   >
     <a
-      className="sc-bwzfXH dTFgNw"
+      className="sc-bwzfXH igPBjT"
       href="/bikes"
       onClick={[Function]}
     >
       bikes
     </a>
     <a
-      className="sc-bwzfXH dTFgNw"
+      className="sc-bwzfXH igPBjT"
       href="/blog"
       onClick={[Function]}
     >
       blog
     </a>
     <a
-      className="sc-bxivhb kkcTrD"
+      className="sc-bxivhb gSSLLD"
       href="/assets/pdf/r.pdf"
       onClick={[Function]}
       role="menuitem"
@@ -44,13 +44,13 @@ exports[`Header actually renders 1`] = `
       resume
     </a>
     <a
-      className="sc-bxivhb kkcTrD"
+      className="sc-bxivhb gSSLLD"
       href="https://github.com/hweeks"
     >
       git
     </a>
     <a
-      className="sc-bxivhb kkcTrD"
+      className="sc-bxivhb gSSLLD"
       href="mailto:root@hweeks.com"
       onClick={[Function]}
       role="menuitem"

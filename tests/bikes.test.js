@@ -1,6 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Bike from '../src/components/Bike';
+import { ThemeProvider } from 'styled-components'
+import {light} from '../src/themes'
 
 const bikeSettings = {
   name: 'bike name',
@@ -10,11 +12,14 @@ const bikeSettings = {
 
 test('Bike actually renders', () => {
   const component = renderer.create(
-    <Bike
-      imagename={bikeSettings.imagename}
-      name={bikeSettings.name}
-      size={bikeSettings.size}
-    />,
+    <ThemeProvider theme={light}>
+      <Bike
+        imagename={bikeSettings.imagename}
+        name={bikeSettings.name}
+        size={bikeSettings.size}
+      />
+    </ThemeProvider>
+    ,
   );
 
   const tree = component.toJSON();

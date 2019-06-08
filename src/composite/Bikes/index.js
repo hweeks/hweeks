@@ -1,5 +1,5 @@
 import React from 'react';
-import {BikeContainer} from './styles'
+import { BikeContainer } from './styles';
 import Bike from '../../components/Bike';
 
 const bikes = [

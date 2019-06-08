@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Reset } from 'styled-reset'
+import { Reset } from 'styled-reset';
 import {
   SiteContainer,
   SiteContent,
-  SiteGlobals
-} from './styles'
+  SiteGlobals,
+} from './styles';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Post from '../../components/Post';
@@ -28,4 +28,4 @@ const App = () => (
   </SiteContainer>
 );
 
-export default App
+export default App;
