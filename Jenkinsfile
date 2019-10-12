@@ -14,7 +14,6 @@ pipeline {
     ).trim()
   }
   stages {
-    def builder
     stage('lint') {
       steps {
         sh """
@@ -26,7 +25,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        builder = docker.build "hams/hweeks"
+        def builder = docker.build "hams/hweeks"
       }
     }
     stage('tag and push') {
