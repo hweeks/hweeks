@@ -6,8 +6,6 @@ pipeline {
     }
   }
   environment {
-    DOCKER_USER = credentials('docker_user')
-    DOCKER_PASS = credentials('docker_pass')
     BUILD_TAG = sh (
         script: 'git log -1 --format=%h',
         returnStdout: true
