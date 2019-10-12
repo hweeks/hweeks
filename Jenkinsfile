@@ -1,6 +1,5 @@
 
 pipeline {
-  def builder
   agent {
     docker {
       image 'node:12'
@@ -15,6 +14,7 @@ pipeline {
     ).trim()
   }
   stages {
+    def builder
     stage('lint') {
       steps {
         sh """
