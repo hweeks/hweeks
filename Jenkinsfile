@@ -1,9 +1,9 @@
 
 pipeline {
   agent {
-    docker {
-      image 'node:12'
-    }
+    // docker {
+    //   image 'node:12'
+    // }
   }
   environment {
     BUILD_TAG = sh (
@@ -23,11 +23,11 @@ pipeline {
     // }
     stage('build') {
       steps {
-        node('master') {
+        // node('master') {
           script {
             def builder = docker.build "hams/hweeks"
           }
-        }
+        // }
       }
     }
     // stage('tag and push') {
