@@ -1,11 +1,10 @@
 
 pipeline {
-  agent {
-    none
-    // docker {
-    //   image 'node:12'
-    // }
-  }
+  // agent {
+  //   docker {
+  //     image 'node:12'
+  //   }
+  // }
   environment {
     BUILD_TAG = sh (
         script: 'git log -1 --format=%h',
