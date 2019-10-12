@@ -23,14 +23,14 @@ pipeline {
             steps {
                 sh """
                 docker login -u $DOCKER_USER -p $DOCKER_PASS
-                docker build -t hweeks-jenkins --build-arg GIT_COMMIT=$(git log -1 --format=%h) .
+                docker build -t hweeks-jenkins --build-arg GIT_COMMIT=\$(git log -1 --format=%h) .
                 """
             }
         }
         stage('tag') {
             steps {
                 sh """
-                docker tag hweeks-jenkins hams/hweeks:$(git log -1 --format=%h)
+                docker tag hweeks-jenkins hams/hweeks:\$(git log -1 --format=%h)
                 docker tag hweeks-jenkins hams/hweeks:latest
                 """
             }
@@ -38,7 +38,7 @@ pipeline {
         stage('push') {
             steps {
                 sh """
-                docker push hams/hweeks:$(git log -1 --format=%h)
+                docker push hams/hweeks:\$(git log -1 --format=%h)
                 docker push hams/hweeks:latest
                 """
             }
