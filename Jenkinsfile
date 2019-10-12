@@ -1,10 +1,10 @@
 
 pipeline {
-  agent {
-    docker {
-      image 'node:12'
-    }
-  }
+  // agent {
+  //   docker {
+  //     image 'node:12'
+  //   }
+  // }
   environment {
     DOCKER_USER = credentials('docker_user')
     DOCKER_PASS = credentials('docker_pass')
@@ -36,6 +36,17 @@ pipeline {
           docker.withRegistry('https://registry.hub.docker.com', 'docker_user_pass') {
             builder.push("${env.BUILD_TAG}")
             builder.push("latest")
+          }
+        }
+      }
+    }
+    stage('Example') {
+    steps {
+      script {
+        if (env.BRANCH_NAME != 'master') {
+            echo 'This is not master'
+          } else {
+            echo 'things and stuff'
           }
         }
       }
