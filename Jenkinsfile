@@ -1,47 +1,37 @@
 
 pipeline {
-    agent {
-        docker {
-            image 'node:12'
-        }
+  def builder
+  agent {
+    docker {
+      image 'node:12'
     }
-    environment {
-        DOCKER_USER = credentials('docker_user')
-        DOCKER_PASS = credentials('docker_pass')
+  }
+  environment {
+    DOCKER_USER = credentials('docker_user')
+    DOCKER_PASS = credentials('docker_pass')
+    BUILD_TAG = sh (
+        script: 'git log -1 --format=%h',
+        returnStdout: true
+    ).trim()
+  }
+  stages {
+    stage('lint') {
+      steps {
+        sh """
+        yarn
+        yarn lint
+        yarn test
+        """
+      }
     }
-    stages {
-        stage('lint') {
-            steps {
-                sh """
-                yarn
-                yarn lint
-                yarn test
-                """
-            }
-        }
-        stage('build') {
-            steps {
-                sh """
-                docker login -u $DOCKER_USER -p $DOCKER_PASS
-                docker build -t hweeks-jenkins --build-arg GIT_COMMIT=\$(git log -1 --format=%h) .
-                """
-            }
-        }
-        stage('tag') {
-            steps {
-                sh """
-                docker tag hweeks-jenkins hams/hweeks:\$(git log -1 --format=%h)
-                docker tag hweeks-jenkins hams/hweeks:latest
-                """
-            }
-        }
-        stage('push') {
-            steps {
-                sh """
-                docker push hams/hweeks:\$(git log -1 --format=%h)
-                docker push hams/hweeks:latest
-                """
-            }
-        }
+    stage('build') {
+      builder = docker.build "hams/hweeks"
     }
+    stage('tag and push') {
+      docker.withRegistry('https://registry.hub.docker.com', 'docker_user_pass') {
+        builder.push("${env.BUILD_TAG}")
+        builder.push("latest")
+      }
+    }
+  }
 }
