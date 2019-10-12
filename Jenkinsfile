@@ -14,42 +14,44 @@ pipeline {
     ).trim()
   }
   stages {
-    stage('lint') {
-      steps {
-        sh """
-        yarn
-        yarn lint
-        yarn test
-        """
-      }
-    }
+    // stage('lint') {
+    //   steps {
+    //     sh """
+    //     yarn
+    //     yarn lint
+    //     yarn test
+    //     """
+    //   }
+    // }
     stage('build') {
       steps {
-        script {
-          def builder = docker.build "hams/hweeks"
-        }
-      }
-    }
-    stage('tag and push') {
-      steps {
-        script {
-          docker.withRegistry('https://registry.hub.docker.com', 'docker_user_pass') {
-            builder.push "${env.BUILD_TAG}"
-            builder.push "latest"
+        node('master') {
+          script {
+            def builder = docker.build "hams/hweeks"
           }
         }
       }
     }
-    stage('Example') {
-    steps {
-      script {
-        if (env.BRANCH_NAME != 'master') {
-            echo 'This is not master'
-          } else {
-            echo 'things and stuff'
-          }
-        }
-      }
-    }
+    // stage('tag and push') {
+    //   steps {
+    //     script {
+    //       docker.withRegistry('https://registry.hub.docker.com', 'docker_user_pass') {
+    //         builder.push "${env.BUILD_TAG}"
+    //         builder.push "latest"
+    //       }
+    //     }
+    //   }
+    // }
+    // stage('branch stuff') {
+    //   steps {
+    //     script {
+    //       if (env.BRANCH_NAME != 'master') {
+    //           echo 'This is not master'
+    //       } else {
+    //           echo 'things and stuff'
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
