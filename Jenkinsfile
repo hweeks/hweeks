@@ -25,12 +25,16 @@ pipeline {
       }
     }
     stage('build') {
-      builder = docker.build "hams/hweeks"
+      steps {
+        builder = docker.build "hams/hweeks"
+      }
     }
     stage('tag and push') {
-      docker.withRegistry('https://registry.hub.docker.com', 'docker_user_pass') {
-        builder.push("${env.BUILD_TAG}")
-        builder.push("latest")
+      steps {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker_user_pass') {
+          builder.push("${env.BUILD_TAG}")
+          builder.push("latest")
+        }
       }
     }
   }
