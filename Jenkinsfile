@@ -1,10 +1,6 @@
 
 pipeline {
-  // agent {
-  //   docker {
-  //     image 'node:12'
-  //   }
-  // }
+  agent any
   environment {
     BUILD_TAG = sh (
         script: 'git log -1 --format=%h',
@@ -12,15 +8,16 @@ pipeline {
     ).trim()
   }
   stages {
-    // stage('lint') {
-    //   steps {
-    //     sh """
-    //     yarn
-    //     yarn lint
-    //     yarn test
-    //     """
-    //   }
-    // }
+    stage('lint') {
+      agent { docker 'node:12' }
+      steps {
+        sh """
+        yarn
+        yarn lint
+        yarn test
+        """
+      }
+    }
     stage('build') {
       steps {
         // node('master') {
