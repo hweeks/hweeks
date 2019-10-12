@@ -7,10 +7,7 @@
     "start": "IS_DEV=true webpack-dev-server --hot",
     "build": "webpack",
     "test": "jest",
-    "lint": "eslint src/",
-    "ci": "npm run ci-test; npm run ci-lint",
-    "ci-test": "jest",
-    "ci-lint": "eslint src/"
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
